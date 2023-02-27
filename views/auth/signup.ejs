@@ -1,0 +1,35 @@
+<%- include('../common/includes/head', { title: '회원가입' }) %>
+<link rel="stylesheet" href="/style/auth.css">
+<script type="module" src="/scripts/auth.js"></script>
+</head>
+<body>
+  <%- include('../common/includes/header')%>
+  <main id="main-signup">
+    <h1>Sign up</h1>
+    <form id="signup">
+      <p>
+        <label for="email">email<span class="notice-validation"></span></label>
+        <input type="email" name="email" id="email" placeholder="eintory@eintory.com" required>
+      </p>
+      <p>
+        <label for="password">password<span class="notice-validation"></span></label>
+        <input type="password" name="password" id="password" required>
+      </p>
+      <p title="유저타입선택">
+        <span class="select-title">type</span>
+        <div id="usertype">
+          <div>
+            <input type="radio" name="usertype" id="usertype-eintory" >
+            <label for="usertype-eintory">eintory</label>
+          </div>
+          <div>
+            <input type="radio" name="usertype" id="usertype-seller" >
+            <label for="usertype-seller">seller</label>
+          </div>
+        </div>
+      </p>
+      <button type="submit" class="btn-contain btn-large" id="btn-signup" disabled>sign up</button>
+    </form>
+  </main>
+</body>
+</html>

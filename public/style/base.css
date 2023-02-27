@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  
+  --color-gray-100: #D9D9D9;
+  --color-gray-200: #7E7E7E;
+  --color-gray-300: #353535;
+
+  --color-bgray-100: #F1EDE6;
+  --color-bgray-200: #D2CDC3;
+
+  --color-main: #FDA56F;
+  --color-main-100: #FFC39E;
+  --color-main-200: #FFAD94;
+  --color-main-300: #C6723F;
+
+  --color-red-100: #FF9E9E;
+  --color-red-200: #FF7D7D;
+  --color-red-300: #FF4444;
+
+  --color-blue-100: #546D9F;
+}
+
+main {
+  width: 80%;
+  max-width: 87.5rem;
+  margin: 0 auto;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button,
+.asbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+button[type="submit"]:disabled {
+  cursor: not-allowed;
+}
+
+button[type="submit"]:disabled:hover, 
+button[type="submit"]:disabled:focus {
+  border: 2px solid var(--color-red-300);
+  box-shadow: 2px 2px var(--color-red-300);
+}
+
+.btn-small {
+  width: 50px;
+  height: 25px;
+}
+
+.btn-medium {
+  width: 130px;
+  height: 45px;
+}
+
+.btn-large {
+  width: 299px;
+  height: 45px;
+  font-size: 2rem;
+}
+
+.btn-contain {
+  background: var(--color-main);
+  border: 1px solid var(--color-main-300);
+  color: #ffff;
+}
+
+.btn-contain:hover,
+.btn-contain:hover {
+  box-shadow: 2px 2px var(--color-main-300);
+}
+
+.btn-outline {
+  background: #ffff;
+  color: var(--color-main);
+  border: 1px solid var(--color-main);
+}
+
+.btn-outline:hover,
+.btn-outline:hover {
+  box-shadow: 2px 2px var(--color-main-300);
+}
+
+label,
+.select-title {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--color-main);
+  margin-bottom: 0.8rem;
+}
+
+input {
+  width: 299px;
+  height: 45px;
+  padding: 0.7rem;
+  background: #ffff;
+  border: 1px solid var(--color-bgray-200);
+  border-radius: 3px;
+  font-size: 1.4rem;
+}
+
+input::placeholder {
+  font-size: 1.4rem;
+  color: var(--color-bgray-200);
+}
