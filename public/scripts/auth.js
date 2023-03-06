@@ -1,32 +1,46 @@
-import authValidate from "./controll/auth.validation.js";
-
-
-  const get = (select) => document.querySelector(select);
-  const getAll = (select) => document.querySelectorAll(select);
-  const createEl = (tag) => document.createElement(tag)
-
+import { get } from "./common/getElement.js";
+import Auth from "./controll/auth.validation.js";
+import { signup } from "./api/auth.fetch.js";
+  
 const $emailInput = get('input#email');
 const $passwordInput = get('input#password');
+const $submitButton = get('button[type="submit"]');
+const $signupForm = get('#form-signup');
 
-function emailValidate(e) {
-  const { value } = e.target
-  const emailCondition =
-    /^[0-9a-zA-Z]([-_\\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i
+const auth = new Auth($submitButton)
 
-  authValidate(emailCondition.test(value), e.target, '!email형식이 아닙니다.')
+function inputValueValidate(e) {
+  const isvaildated = auth.isChecked(e.target)
+  let text;
+  if(e.target.id === 'email') {
+    auth.checkedEmail = isvaildated
+    text = '!email형식이 아닙니다.'
+  } else {
+    auth.checkedPassword = isvaildated
+    text = '!8자리이상 입력해주세요'
+  }
+  auth.checkingValue(e.target, isvaildated, text)
 }
 
-function passwordValidate(e) {
-  const { value } = e.target
-  const passwordCondition = (value) => value.length >= 8
+async function addNewUser(e) {
+  e.preventDefault();
+  try { 
+    const data = new FormData(e.target)
+    const newUser = {
+      'email': data.get('email'),
+      'password': data.get('password')
+    }
+    await signup(newUser);
+  } catch {
 
-  authValidate(passwordCondition(value), e.target, '!8자리이상 입력해주세요')
+  }
+
 }
-
 
 window.addEventListener('DOMContentLoaded', () => {
   $emailInput.focus()
 })
 
-$emailInput.addEventListener('change', emailValidate);
-$passwordInput.addEventListener('change', passwordValidate)
+$emailInput.addEventListener('change', inputValueValidate);
+$passwordInput.addEventListener('change', inputValueValidate);
+$signupForm.addEventListener('submit', addNewUser);

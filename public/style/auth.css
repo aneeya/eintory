@@ -1,4 +1,4 @@
-#main-signup {
+#main-auth {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,7 +11,8 @@ h1 {
   font-weight: 700;
 }
 
-form#signup {
+#form-signup,
+#form-login {
   width: 30rem;
   /* height: 32.5rem; */
 }
@@ -26,34 +27,7 @@ p:last-of-type {
   margin-bottom: 4.9rem;
 }
 
-#usertype {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 19.7rem;
-  height: 1.9rem;
-  margin: 0 auto;
-}
 
-#usertype div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-label[for="usertype-eintory"],
-label[for="usertype-seller"] {
-  margin-bottom: 0.4rem;
-  font-size: 1.6rem;
-  font-weight: 400;
-  color: var(--color-gray-200);
-}
-
-input[name="usertype"] {
-  width: 1.3rem;
-  height: 1.3rem;
-  margin-right: 1rem;
-}
 
 label[for="email"],
 label[for="password"] {
