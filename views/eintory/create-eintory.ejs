@@ -1,9 +1,86 @@
 <%- include('../common/includes/head', { title: 'create-eintory' }) %>
+<link rel="stylesheet" href="/style/create-eintory.css">
+<link rel="stylesheet" href="/style/combine-eintory.css">
+<script type="module" src="/scripts/create-eintory.js"></script>
 </head>
 <body>
   <%- include('../common/includes/header')%>
   <main id="main-create-eintory">
-    <h1>eintory</h1>
+    <h1>create eintory</h1>
+    <form id="form-create-eintory">
+      <div id="create-eintory-categories">
+        <div id="create-eintory-category1">
+          <div id="create-eintory-preview">
+            <img src="/assets/source/cheek-peach.svg" alt="캐릭터 이미지" id="preview-cheek" width="200px">
+          </div>
+          <p id="category-cheek">
+            <label for="option-cheek-peach">
+              <span class="cheekoption cheek-peach" aria-role="img" aria-label="피치색상선택"></span>
+              <input type="radio" name="cheek" id="option-cheek-peach" value="cheek-peach" checked>
+            </label>
+            <label for="option-cheek-pink">
+              <span class="cheekoption cheek-pink" aria-role="img" aria-label="핑크색상선택"></span>
+              <input type="radio" name="cheek" id="option-cheek-pink" value="cheek-pink">
+            </label>
+            <label for="option-cheek-purple">
+              <span class="cheekoption cheek-purple" aria-role="img" aria-label="퍼플색상선택"></span>
+              <input type="radio" name="cheek" id="option-cheek-purple" value="cheek-purple">
+            </label>
+          </p>
+        </div>
+        <div id="create-eintory-category2">
+          <fieldset>
+            <legend>eyes</legend>
+            <label for="option-eyes-style1">
+              <img src="/assets/source/eyes1.svg" alt="eyestyle1" width="50px">
+              <input type="radio" name="eyes" id="option-eyes-style1" value="eyes1">
+            </label>
+            <label for="option-eyes-style2">
+              <img src="/assets/source/eyes2.svg" alt="eyestyle2" width="50px">
+              <input type="radio" name="eyes" id="option-eyes-style2" value="eyes2">
+            </label>
+            <label for="option-eyes-style3">
+              <img src="/assets/source/eyes3.svg" alt="eyestyle3" width="50px">
+              <input type="radio" name="eyes" id="option-eyes-style3" value="eyes3">
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>mouth</legend>
+            <label for="option-mouth-style1">
+              <img src="/assets/source/mouth1.svg" alt="mouthstyle1" width="30px">
+              <input type="radio" name="mouth" id="option-mouth-style1" value="mouth1">
+            </label>
+            <label for="option-mouth-style2">
+              <img src="/assets/source/mouth2.svg" alt="mouthstyle2" width="30px">
+              <input type="radio" name="mouth" id="option-mouth-style2" value="mouth2">
+            </label>
+            <label for="option-mouth-style3">
+              <img src="/assets/source/mouth3.svg" alt="mouthstyle3" width="30px">
+              <input type="radio" name="mouth" id="option-mouth-style3" value="mouth3">
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>accessory</legend>
+            <label for="option-accessory-bangs">
+              <img src="/assets/source/acc-bangs.svg" alt="앞머리" width="50px">
+              <input type="checkbox" name="accessory" id="option-accessory-bangs" value="acc-bangs">
+            </label>
+            <label for="option-accessory-mustache">
+              <img src="/assets/source/acc-mustache.svg" alt="수염" width="50px">
+              <input type="checkbox" name="accessory" id="option-accessory-mustache" value="acc-mustache">
+            </label>
+            <label for="option-accessory-sunglasses">
+              <img src="/assets/source/acc-sunglasses.svg" alt="선글라스" width="50px">
+              <input type="checkbox" name="accessory" id="option-accessory-sunglasses" value="acc-sunglasses">
+            </label>
+          </fieldset>
+        </div>
+      </div>
+      <div class="buttons">
+        <button type="submit" class="btn-contain btn-medium" disabled>make</button>
+        <button type="reset" class="btn-outline btn-medium">reset</button>
+      </div>
+    </form>
   </main>
 </body>
 </html>

@@ -25,6 +25,10 @@ html {
   --color-red-300: #FF4444;
 
   --color-blue-100: #546D9F;
+
+  --color-cheek-peach: #DD8781;
+  --color-cheek-pink: #CC6688;
+  --color-cheek-purple: #E6B0EA;
 }
 
 main {
@@ -71,6 +75,8 @@ button[type="submit"]:disabled:focus {
 .btn-medium {
   width: 130px;
   height: 45px;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 .btn-large {

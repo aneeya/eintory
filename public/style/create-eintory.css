@@ -1,0 +1,167 @@
+#main-create-eintory {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin-top: 7.4rem;
+  margin-bottom: 7rem;
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+#form-create-eintory {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 57.7rem;
+  height: 52.5rem;
+}
+
+#create-eintory-categories {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 57.7rem;
+}
+
+#create-eintory-category1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 23rem;
+  height: 32rem;
+}
+
+#create-eintory-preview {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 23rem;
+  height: 25.5rem;
+}
+
+/* #create-eintory-preview img {
+  width: 20rem;
+} */
+
+#create-eintory-category2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 23.7rem;
+  height: 38.5rem;
+}
+/* category */
+
+/* cheek */
+
+#category-cheek {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 22.4rem;
+  height: 4rem;
+}
+
+#category-cheek label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#category-cheek label:hover,
+#category-cheek label:focus {
+  transform: scale(1.15);
+  transition: transform 0.3s ease;
+}
+
+#category-cheek label input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.cheekoption {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.cheek-peach {
+  background: var(--color-cheek-peach);
+}
+
+.cheek-pink {
+  background: var(--color-cheek-pink);
+}
+
+.cheek-purple {
+  background: var(--color-cheek-purple);
+ }
+
+fieldset {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 23rem;
+  height: 10.5rem;
+  padding-top: 1.7rem;
+  border: none;
+}
+
+legend {
+  font-weight: 500;
+  font-size: 2rem;
+  color: var(--color-main);
+}
+
+fieldset label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 6.5rem;
+  height: 6.5rem;
+  border: 1.5px solid var(--color-main-100);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+fieldset label:hover,
+fieldset label:focus {
+  box-shadow: 2px 2px inset var(--color-main-100);
+  transition: box-shadow 0.15s ease;
+}
+
+fieldset label input {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 26.6rem;
+  height: 4.5rem;
+}

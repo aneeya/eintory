@@ -1,0 +1,49 @@
+.preview-items {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+}
+
+
+
+#preview-eyes1,
+#preview-eyes2 {
+  transform: translateX(-50%);
+  width: 10rem;
+}
+
+#preview-eyes3 {
+  transform: translate(-50%, 40%);
+  width: 10rem;
+}
+
+
+
+#preview-mouth1,
+#preview-mouth2 {
+  top: 68%;
+  width: 2.5rem;
+  transform: translateX(-50%);
+}
+
+#preview-mouth3 {
+  top: 68%;
+  width: 1.2rem;
+  transform: translate(-50%, 5%);
+}
+
+#preview-acc-bangs {
+  width: 5rem;
+  transform: translate(-50%, -61.5%);
+}
+
+#preview-acc-mustache {
+  width: 4rem;
+  transform: translate(-50%, 140%);
+}
+
+#preview-acc-sunglasses {
+  width: 14rem;
+  transform: translate(-50%, -10%);
+  z-index: 5;
+}
